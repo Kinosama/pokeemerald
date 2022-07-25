@@ -27,6 +27,7 @@
 #include "constants/map_types.h"
 #include "constants/rgb.h"
 #include "constants/weather.h"
+#include "start_menu.h"
 
 /*
  *  This file handles region maps generally, and the map used when selecting a fly destination.
@@ -2022,7 +2023,8 @@ static void CB_ExitFlyMap(void)
             }
             else
             {
-                SetMainCallback2(CB2_ReturnToPartyMenuFromFlyMap);
+                //SetMainCallback2(CB2_ReturnToPartyMenuFromFlyMap);
+                SetMainCallback2(CB2_ReturnToFieldWithOpenMenu);
             }
             TRY_FREE_AND_SET_NULL(sFlyMap);
             FreeAllWindowBuffers();
